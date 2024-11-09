@@ -74,7 +74,7 @@ B.  Get the pod IP (oc get po -o wide)
 C.  oc rsh/network-tools-<randomuid>
       curl http://<ipofsampleapplication>:8080
 
-D.  Create network-tools pod on tenant B and try to ping/curl (poirt 8080) the IP associated with sampleapplication pod in tenanta
+D.  Create network-tools pod on tenant B and try to ping/curl (poirt 8080) the IP associated with sampleapplication pod in tenanta.  This should fail
 
 
 ● Pods/VMs in Tenant A cannot mount PVs from tenant B
