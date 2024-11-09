@@ -9,11 +9,11 @@ Success Criteria:
 
 ● A tenant "A" cannot see any resource created and managed by tenant "B".
 
-1.  oc login https://api.home.calligan.name:6443 -u usera
+1.  oc login https://api.clusterfqdn:6443 -u usera
 WARNING: Using insecure TLS client config. Setting this option is not supported!
 
-Console URL: https://api.home.calligan.name:6443/console
-Authentication required for https://api.home.calligan.name:6443 (openshift)
+Console URL: https://api.clusterfqdn:6443/console
+Authentication required for https://api.clusterfqdn:6443 (openshift)
 Username: usera
 Password:
 Login successful.
@@ -74,7 +74,7 @@ B.  Get the pod IP (oc get po -o wide)
 C.  oc rsh/network-tools-<randomuid>
       curl http://<ipofsampleapplication>:8080
 
-
+D.  Create network-tools pod on tenant B and try to ping/curl (poirt 8080) the IP associated with sampleapplication pod in tenanta
 
 
 ● Pods/VMs in Tenant A cannot mount PVs from tenant B
