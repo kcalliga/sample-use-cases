@@ -1,1 +1,14 @@
-sdfsdfdsfdsfsfd
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: httpd
+  namespace: httpd
+  finalizers:
+    - kubernetes.io/pvc-protection
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  volumeMode: Filesystem
