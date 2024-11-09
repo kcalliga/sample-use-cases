@@ -32,6 +32,9 @@ spec:
       securityContext: {}
       schedulerName: default-scheduler
       imagePullSecrets: []
+      volumeMounts:
+      - name: httpd
+        mountPath: /var/www/html
   strategy:
     type: RollingUpdate
     rollingUpdate:
