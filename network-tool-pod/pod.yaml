@@ -11,7 +11,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        app: ping
+        app: network-tools
         deploymentconfig: network-tools
     spec:
       containers:
