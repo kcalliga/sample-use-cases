@@ -13,4 +13,4 @@ Steps to follow
 1.  Create oauth configuration to add htpasswd multi-tenant provider to cluster.  These are the files in auth folder.
 2.  Create the projects as defined in the YAMLS in /projects folder.
 3.  Add roles to users (see /roles)
-4.  
+4.  Apply projectconfig.yaml from /projectreques
