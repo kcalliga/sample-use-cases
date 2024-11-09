@@ -79,10 +79,29 @@ D.  Create network-tools pod on tenant B and try to ping/curl (poirt 8080) the I
 
 ● Pods/VMs in Tenant A cannot mount PVs from tenant B
 
+Go in as usera
 
+[keith@vpn-hopper application-pod]$ oc get pv
+Error from server (Forbidden): persistentvolumes is forbidden: User "usera" cannot list resource "persistentvolumes" in API group "" at the cluster scope
+
+[keith@vpn-hopper application-pod]$ oc get pvc
+NAME    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS                VOLUMEATTRIBUTESCLASS   AGE
+httpd   Bound    pvc-e9e23663-99f5-4571-94e8-98110dd43251   1Gi        RWO            ocs-storagecluster-cephfs   <unset>                 4m46s
+
+Go is as userb and try to view resources in tenanta
+
+[keith@vpn-hopper application-pod]$ oc get pvc -n tenanta
+Error from server (Forbidden): persistentvolumeclaims is forbidden: User "userb" cannot list resource "persistentvolumeclaims" in API group "" in the namespace "tenanta
 
 ● Operators/Helm Charts/Applications deployed by tenant B are not visible by tenant A
 
+
+
 ● Tenant A and have its own credentials to access the cluster
 
-● Tenant A can create multiple projects with quo
+This ia accomplished through htpasswd
+
+● Tenant A can create multiple projects with quota
+
+One idea on how to accomplish this would be to create projects with the nomenclature called tenanta-project1, tenanta-project2, etc.  The number of projects to be created would be limited per user
+
