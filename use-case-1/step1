@@ -1,8 +1,0 @@
-Login as a user
-
-In this example, I will login to the cluster as usera
-
-oc login https://<apiendpoint>:6443 -u usera
-
-Let's try to view cluster-wide resources and see what is viewable
-
