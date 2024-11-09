@@ -10,7 +10,7 @@ spec:
   identityProviders:
     - htpasswd:
         fileData:
-          name: htpasswd-xcdmx
+          name: htpasswd-multitenant
       mappingMethod: claim
       name: htpasswd-multitenant
       type: HTPasswd
