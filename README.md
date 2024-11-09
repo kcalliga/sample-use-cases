@@ -5,3 +5,9 @@ I will describe the folder layout a little bit
 /auth - this contains an htpasswd oauth configuration to add users for different different with varying levels of privileges
 
 /projects - this directory contains the projects/namespaces that will be used in multi-tenant use-cases
+
+Steps to follow
+
+1.  Create oauth configuration to add htpasswd multi-tenant provider to cluster.  These are the files in auth folder.
+2.  Create the projects as defined in the YAMLS in /projects folder.
+3.  
