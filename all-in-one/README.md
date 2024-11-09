@@ -16,7 +16,7 @@ An http-pod (with pvc) which will be used to test a sample application.  It list
 
 A network-toolbox pod which will allow various tenants to run their tests.  Some tools that this has is ping, curl, nslookup, etc
 
-A userquota that gets applied to only allow a user to create two projects/namespaces
+A userquota that gets applied to only allow a user to create two projects/namespaces (work in progress)
 
 The projects/namespaces that get created right now are as follows:
 
