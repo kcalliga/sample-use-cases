@@ -103,5 +103,5 @@ This ia accomplished through htpasswd
 
 ● Tenant A can create multiple projects with quota
 
-One idea on how to accomplish this would be to create projects with the nomenclature called tenanta-project1, tenanta-project2, etc.  The number of projects to be created would be limited per user
+One idea on how to accomplish this would be to create projects with the nomenclature called tenanta-project1, tenanta-project2, etc.  The number of projects to be created would be limited per user.  Some resources can be controlled at user level and some of these work together at project level too
 
