@@ -1,14 +1,20 @@
-kind: PersistentVolumeClaim
 apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
-  name: httpd
-  namespace: httpd
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: openshift-storage.cephfs.csi.ceph.com
+    volume.kubernetes.io/storage-provisioner: openshift-storage.cephfs.csi.ceph.com
   finalizers:
-    - kubernetes.io/pvc-protection
+  - kubernetes.io/pvc-protection
+  name: httpd
 spec:
   accessModes:
-    - ReadWriteOnce
+  - ReadWriteOnce
   resources:
     requests:
       storage: 1Gi
+  storageClassName: ocs-storagecluster-cephfs
   volumeMode: Filesystem
+
