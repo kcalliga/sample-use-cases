@@ -79,6 +79,8 @@ D.  Create network-tools pod on tenant B and try to ping/curl (poirt 8080) the I
 
 ● Pods/VMs in Tenant A cannot mount PVs from tenant B
 
+
+
 ● Operators/Helm Charts/Applications deployed by tenant B are not visible by tenant A
 
 ● Tenant A and have its own credentials to access the cluster
