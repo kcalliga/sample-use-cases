@@ -65,9 +65,12 @@ Error from server (Forbidden): virtualmachinesnapshots.snapshot.kubevirt.io is f
 ● Pods/VMs in Tenant A cannot reach pods in tenant B (Network Isolation)
 
 Deploy the sampleapplication pod in each namespace
-3.
+
+3.  
 A.Show that usera on tenanta can curl the endpoint locally on port 8080
+
 B.  Get the pod IP (oc get po -o wide)
+
 C.  oc rsh/network-tools-<randomuid>
       curl http://<ipofsampleapplication>:8080
 
