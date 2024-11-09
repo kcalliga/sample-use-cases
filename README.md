@@ -14,3 +14,4 @@ Steps to follow
 2.  Create the projects as defined in the YAMLS in /projects folder.
 3.  Add roles to users (see /roles)
 4.  Apply project-config.yaml from /projectbootstraptemplate and the bootstrap-with-network-isolation.yaml yaml (this will enfore isolation between tenants by default)
+5.  Create sampleapplication pod (httpd) and net-toolbox pod in each tenant namespace as you wish.
