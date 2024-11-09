@@ -26,15 +26,19 @@ spec:
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
           imagePullPolicy: Always
+          volumeMounts:
+          - name: httpd
+            mountPath: /var/www/html
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
       securityContext: {}
       schedulerName: default-scheduler
       imagePullSecrets: []
-      volumeMounts:
-      - name: httpd
-        mountPath: /var/www/html
+      volumes:
+        - name: httpd
+          persistentVolumeClaim:
+            claimName: httpd
   strategy:
     type: RollingUpdate
     rollingUpdate:
