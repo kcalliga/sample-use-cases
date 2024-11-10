@@ -1,6 +1,6 @@
 # User and Admin Role Assignments
 
-This document outlines the user and admin roles assigned within the multi-tenant OpenShift environment.
+This document outlines the user and admin roles assigned within the multi-tenant OpenShift environment.  The password for all users in this demo are set as "password"
 
 ## Users and Tenants
 
