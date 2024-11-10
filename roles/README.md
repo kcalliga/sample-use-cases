@@ -34,6 +34,7 @@ oc adm policy add-role-to-user edit usera -n tenanta
 oc adm policy add-role-to-user edit userb -n tenantb
 oc adm policy add-role-to-user edit userc -n tenantc
 
+
 ## Role Name	Description
 
 * **admin**	A project manager with rights to view and modify any resource in the project (except quota).
