@@ -1,19 +1,33 @@
-This list of use-cases will be used to prove the typical security stance of Openshift with some other requirements thrown in.  This will be ongoing work.
+# OpenShift Security Use Cases
 
-I will describe the folder layout a little bit
+This repository demonstrates typical security stances in OpenShift, incorporating additional requirements for a comprehensive security overview. This is an ongoing project with continuous development.
 
-/auth - this contains an htpasswd oauth configuration to add users for different different with varying levels of privileges
+## Folder Structure
 
-/projects - this directory contains the projects/namespaces that will be used in multi-tenant use-cases
+* **`/auth`**: Contains an htpasswd OAuth configuration to add users with varying privilege levels for different tenants.
+* **`/projects`**: Contains YAML definitions for projects/namespaces used in multi-tenant use cases.
+* **`/roles`**:  Provides steps to assign admin and regular user roles to users within projects.
+* **`/all-in-one`**: Includes a shell script (`createEnvironment.sh`) to automate the creation of all necessary resources for the demos. Use this for quick and easy setup.
+* **`/projectbootstraptemplate`**: Contains templates for bootstrapping projects with security configurations.
 
-/roles - describes steps to add admin and regular user role to users
+## Steps to Follow
 
-/all-in-one - This directory contains a shell script and a createEnvironment.sh file to create all resources necessary for these demos.  This is if you want to create all the resources quickly in one-shot.
+1. **Configure OAuth:**
+   - Apply the htpasswd multi-tenant provider configuration to your OpenShift cluster using the files in the `/auth` folder. This enables user authentication and authorization.
 
-Steps to follow
+2. **Create Projects:**
+   - Create the projects defined in the YAML files located in the `/projects` folder. These projects will represent different tenants in the multi-tenant environment.
 
-1.  Create oauth configuration to add htpasswd multi-tenant provider to cluster.  These are the files in auth folder.
-2.  Create the projects as defined in the YAMLS in /projects folder.
-3.  Add roles to users (see /roles)
-4.  Apply project-config.yaml from /projectbootstraptemplate and the bootstrap-with-network-isolation.yaml yaml (this will enfore isolation between tenants by default)
-5.  Create sampleapplication pod (httpd) and net-toolbox pod in each tenant namespace as you wish.
+3. **Assign User Roles:**
+   - Refer to the `/roles` folder for instructions on adding admin and regular user roles to users within the projects. This step establishes access control and defines user permissions.
+
+4. **Apply Project Configuration:**
+   - Apply the `project-config.yaml` file from the `/projectbootstraptemplate` directory. This configures basic project settings.
+   - Apply the `bootstrap-with-network-isolation.yaml` file. This enforces network isolation between tenants by default, enhancing security.
+
+5. **Deploy Sample Applications:**
+   - Create sample application pods (e.g., `httpd` for a basic web server) and `net-toolbox` pods in each tenant namespace as needed. These applications will be used to demonstrate various security features and configurations.
+
+## Ongoing Work
+
+This repository is actively being developed with new use cases and security demonstrations added regularly. Stay tuned for updates and contributions are welcome!
