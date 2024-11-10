@@ -46,12 +46,12 @@ oc adm policy add-role-to-user admin adminb -n tenantb-project2
 oc adm policy add-role-to-user admin adminc -n tenantc-project1
 oc adm policy add-role-to-user admin adminc -n tenantc-project2
 # Create pvcs in all projects/namespaces
-oc apply -f pvc.yaml -n tenanta-project1
-oc apply -f pvc.yaml -n tenanta-project2
-oc apply -f pvc.yaml -n tenantb-project1
-oc apply -f pvc.yaml -n tenantb-project2
-oc apply -f pvc.yaml -n tenantc-project1
-oc apply -f pvc.yaml -n tenantc-project2
+#oc apply -f pvc.yaml -n tenanta-project1
+#oc apply -f pvc.yaml -n tenanta-project2
+#oc apply -f pvc.yaml -n tenantb-project1
+#oc apply -f pvc.yaml -n tenantb-project2
+#oc apply -f pvc.yaml -n tenantc-project1
+#oc apply -f pvc.yaml -n tenantc-project2
 # Create httpd application
 oc apply -f http-pod.yaml -n tenanta-project1
 oc apply -f http-pod.yaml -n tenanta-project2
