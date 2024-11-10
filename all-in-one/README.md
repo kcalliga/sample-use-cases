@@ -1,33 +1,27 @@
-This directory contains and all-in-one script which can start setting up your Openshift test-bench to test various use-cases.
+# All-in-One Setup Script
 
-To start, I have the following
+This directory contains an all-in-one script to quickly set up your OpenShift test bench for exploring various security use cases.
 
-A defualt project template is created to enforce network-policy between namespaces (no connectivity between namespaces by default)
+**The script currently automates the following:**
 
-An htpassd identity that gets added to oauth to create usera, userb, userc, admina, adminb, and adminc users
+* **Default Project Template:** Creates a default project template that enforces network policies between namespaces, ensuring no connectivity by default.
+* **Htpasswd Identity Provider:** Adds an htpasswd identity provider to OpenShift's OAuth configuration. This creates the following users:
+    * `usera`, `userb`, `userc` (regular users)
+    * `admina`, `adminb`, `adminc` (admin users)
+    * The password for all users is set to "password".
+* **Secrets and Htpasswd File:**  Creates the necessary secrets and htpasswd file associated with the identity provider.
+* **Multi-Tenant Structure:** Creates multiple tenants and projects within those tenants:
+    * `tenanta/project1`
+    * `tenanta/project2`
+    * `tenantb/project1`
+    * `tenantb/project2`
+    * `tenantc/project1`
+    * `tenantc/project2`
+* **Role Bindings:**  Assigns appropriate roles to users within each tenant:
+    * Users receive the `edit` role.
+    * Admins receive the `admin` role.
+* **Sample Application (httpd):** Deploys an httpd pod with a Persistent Volume Claim (PVC) to serve as a sample application. The pod listens on port 8080 and has a service attached.
+* **Network Toolbox Pod:** Deploys a network toolbox pod in each tenant, providing tools like `ping`, `curl`, and `nslookup` for testing network connectivity and configurations.
+* **User Quota:** Applies a user quota to limit users to creating only two projects/namespaces (work in progress).
 
-The secret (password is password) and htpasswd file associated with above
-
-The creation of multiple tenants and various projects underneath those tenants
-
-The appropriate bindings for each tenant.  users will have edit role and admin will have admin role
-
-An http-pod (with pvc) which will be used to test a sample application.  It listens on port 8080 and also has a service attached to it
-
-A network-toolbox pod which will allow various tenants to run their tests.  Some tools that this has is ping, curl, nslookup, etc
-
-A userquota that gets applied to only allow a user to create two projects/namespaces (work in progress)
-
-The projects/namespaces that get created right now are as follows:
-
-tenanta/project1
-
-tenanta/project2
-
-tenantb/project1
-
-tenantb/project2
-
-tenantc/project1
-
-tenantc/project2
+This script simplifies the setup process, allowing you to quickly establish a multi-tenant environment with predefined security configurations and sample applications for testing and demonstration purposes.
