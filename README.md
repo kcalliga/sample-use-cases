@@ -8,6 +8,8 @@ I will describe the folder layout a little bit
 
 /roles - describes steps to add admin and regular user role to users
 
+/all-in-one - This directory contains a shell script and a createEnvironment.sh file to create all resources necessary for these demos.  This is if you want to create all the resources quickly in one-shot.
+
 Steps to follow
 
 1.  Create oauth configuration to add htpasswd multi-tenant provider to cluster.  These are the files in auth folder.
