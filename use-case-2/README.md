@@ -1,9 +1,8 @@
-Description:
+## Use Case: Verify Tenant Monitoring Capabilities
 
-This test verifies the monitoring capabilites exposed by openshift to a tenant
+**Description:** This test case verifies the monitoring capabilities available to a tenant within the OpenShift cluster.
 
-Success Criteria:
+**Success Criteria:**
 
-● Tenant A can monitor the applications/VMs deployed in its tenant
-
-● Tenant A cannot see the metrics of resources of Tenant B
+* **Tenant-specific monitoring:** Tenant A can monitor the applications and VMs deployed within its own tenant.
+* **Isolation of metrics:** Tenant A cannot access or view the metrics of resources belonging to Tenant B.
