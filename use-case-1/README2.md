@@ -19,12 +19,10 @@
 
 ## Verifying Isolation Between Tenants
 
-You have access to the following projects and can switch between them with `oc project <projectname>`:
+oc project openshift-virtualization-os-images 
 
-* `openshift-virtualization-os-images`
-* `tenanta`
+# Do something in the openshift-virtualization-os-images project
 
-Let's see what we can list from `tenantb`:
+oc project tenanta
 
-```bash
-[keith@vpn-hopper ~]$ oc get all -n tenantb
+# Do something in the tenanta project
