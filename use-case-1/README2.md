@@ -16,3 +16,15 @@
 1. **Login as `usera` in `tenanta`:**
    ```bash
    oc login https://api.clusterfqdn:6443 -u usera
+
+## Verifying Isolation Between Tenants
+
+You have access to the following projects and can switch between them with `oc project <projectname>`:
+
+* `openshift-virtualization-os-images`
+* `tenanta`
+
+Let's see what we can list from `tenantb`:
+
+```bash
+[keith@vpn-hopper ~]$ oc get all -n tenantb
