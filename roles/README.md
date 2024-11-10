@@ -35,11 +35,12 @@ oc adm policy add-role-to-user edit userb -n tenantb
 oc adm policy add-role-to-user edit userc -n tenantc
 
 ## Role Name	Description
-admin	A project manager with rights to view and modify any resource in the project (except quota).
-basic-user	Can get basic information about projects and users.
-cluster-admin	A super-user with full control over all projects and resources.
-cluster-status	Can get basic cluster status information.
-edit	Can modify most objects in a project, but cannot view or modify roles or bindings.
-self-provisioner	Can create their own projects.
-view	Can view most objects in a project, but cannot make any modifications. Cannot view or modify roles or bindings.
-cluster-reader	Can read objects in the cluster, but with limited viewing capabilities.
+
+* **admin**	A project manager with rights to view and modify any resource in the project (except quota).
+* **basic-user**	Can get basic information about projects and users.
+* **cluster-admin**	A super-user with full control over all projects and resources.
+* **cluster-status**	Can get basic cluster status information.
+* **edit**	Can modify most objects in a project, but cannot view or modify roles or bindings.
+* **self-provisioner**	Can create their own projects.
+* **view**	Can view most objects in a project, but cannot make any modifications. Cannot view or modify roles or bindings.
+* **cluster-reader**	Can read objects in the cluster, but with limited viewing capabilities.
