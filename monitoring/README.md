@@ -1,3 +1,1 @@
-To configure monitoring on user namespaces, do the following:
-
-1.  oc create -f 
+Monitoring is disabled by default between projects/namespaces.  A user needs to be a member of a project/namespace to be able to view any of the metrics in the web console or to even access these objects on command line.
