@@ -1,6 +1,25 @@
-# ServiceMeshControlPlane for usergroup-1
 apiVersion: maistra.io/v2
 kind: ServiceMeshControlPlane
 metadata:
-  name: tenanta-smcp
+  name: basic
   namespace: tenanta
+spec:
+  addons:
+    grafana:
+      enabled: true
+    kiali:
+      enabled: true
+    prometheus:
+      enabled: true
+  gateways:
+    openshiftRoute:
+      enabled: false
+  policy:
+    type: Istiod
+  profiles:
+  - default
+  telemetry:
+    type: Istiod
+  tracing:
+    type: None
+  version: v2.6
