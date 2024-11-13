@@ -1,0 +1,8 @@
+apiVersion: maistra.io/v2
+kind: ServiceMeshMemberRoll
+metadata:
+  name: tenanta-smmr
+  namespace: tenanta
+spec:
+  members:
+  - tenanta
