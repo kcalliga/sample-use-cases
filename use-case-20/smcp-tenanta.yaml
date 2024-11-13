@@ -1,6 +1,0 @@
-# ServiceMeshControlPlane for usergroup-1
-apiVersion: maistra.io/v2
-kind: ServiceMeshControlPlane
-metadata:
-  name: tenanta-smcp
-  namespace: tenanta
