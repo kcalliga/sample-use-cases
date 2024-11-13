@@ -1,9 +1,8 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: tenanta-operator-demo-operatorgroup
-  namespace: tenanta
+  name: tenant-operator-demo-operatorgroup
 spec:
-  serviceAccountName: tenanta-operator-demo-sa
+  serviceAccountName: tenant-operator-demo-sa
   targetNamespaces:
-  - tenanta
+  - <specifynamespace>
