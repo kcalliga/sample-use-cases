@@ -23,7 +23,3 @@ spec:
   tracing:
     type: None
   version: v2.6
-  meshConfig:
-    discoverySelectors:
-    - matchLabels:
-        usergroup: tenanta-group
