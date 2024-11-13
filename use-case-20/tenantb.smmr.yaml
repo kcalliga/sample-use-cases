@@ -1,0 +1,8 @@
+apiVersion: maistra.io/v2
+kind: ServiceMeshMemberRoll
+metadata:
+  name: tenantb-smmr
+  namespace: tenantb
+spec:
+  members:
+  - tenantb
