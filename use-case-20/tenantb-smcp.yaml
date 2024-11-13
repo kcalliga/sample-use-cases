@@ -1,0 +1,6 @@
+# ServiceMeshControlPlane for tenantb
+apiVersion: maistra.io/v2
+kind: ServiceMeshControlPlane
+metadata:
+  name: tenantb-smcp
+  namespace: tenantb
