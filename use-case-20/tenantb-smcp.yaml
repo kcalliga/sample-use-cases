@@ -1,6 +1,25 @@
-# ServiceMeshControlPlane for tenantb
 apiVersion: maistra.io/v2
 kind: ServiceMeshControlPlane
 metadata:
-  name: tenantb-smcp
+  name: basic
   namespace: tenantb
+spec:
+  addons:
+    grafana:
+      enabled: true
+    kiali:
+      enabled: true
+    prometheus:
+      enabled: true
+  gateways:
+    openshiftRoute:
+      enabled: false
+  policy:
+    type: Istiod
+  profiles:
+  - default
+  telemetry:
+    type: Istiod
+  tracing:
+    type: None
+  version: v2.6
