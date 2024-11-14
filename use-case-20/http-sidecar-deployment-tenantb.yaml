@@ -1,19 +1,19 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: httpd
-  namespace: tenantb
+  name: httpd-tenantb
+  namespace: tenanta
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: httpd
+      app: httpd-tenantb
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: httpd
-        deploymentconfig: httpd
+        app: httpd-tenantb
+        deploymentconfig: httpd-tenantb
         sidecar.istio.io/inject: 'true'
       annotations:
     spec:
