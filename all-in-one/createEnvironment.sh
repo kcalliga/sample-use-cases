@@ -29,22 +29,22 @@ oc patch oauth cluster --type='json' -p='[
 oc new-project tenanta-project1
 oc new-project tenanta-project2
 oc new-project tenantb-project1
-oc new-project tenantc-project2
+oc new-project tenantb-project2
 oc new-project tenantc-project1
 oc new-project tenantc-project2
 # Create users and bind them to project/namesspaces
-oc adm policy add-role-to-user edit usera -n tenanta-project1
-oc adm policy add-role-to-user edit usera -n tenanta-project2
-oc adm policy add-role-to-user edit userb -n tenantb-project1
-oc adm policy add-role-to-user edit userb -n tenantb-project2
-oc adm policy add-role-to-user edit userc -n tenantc-project1
-oc adm policy add-role-to-user edit userc -n tenantc-project2
-oc adm policy add-role-to-user admin admina -n tenanta-project1
-oc adm policy add-role-to-user admin admina -n tenanta-project2
-oc adm policy add-role-to-user admin adminb -n tenantb-project1
-oc adm policy add-role-to-user admin adminb -n tenantb-project2
-oc adm policy add-role-to-user admin adminc -n tenantc-project1
-oc adm policy add-role-to-user admin adminc -n tenantc-project2
+oc policy add-role-to-user edit usera -n tenanta-project1
+oc policy add-role-to-user edit usera -n tenanta-project2
+oc policy add-role-to-user edit userb -n tenantb-project1
+oc policy add-role-to-user edit userb -n tenantb-project2
+oc policy add-role-to-user edit userc -n tenantc-project1
+oc policy add-role-to-user edit userc -n tenantc-project2
+oc policy add-role-to-user admin admina -n tenanta-project1
+oc policy add-role-to-user admin admina -n tenanta-project2
+oc policy add-role-to-user admin adminb -n tenantb-project1
+oc policy add-role-to-user admin adminb -n tenantb-project2
+oc policy add-role-to-user admin adminc -n tenantc-project1
+oc policy add-role-to-user admin adminc -n tenantc-project2
 # Create pvcs in all projects/namespaces
 #oc apply -f pvc.yaml -n tenanta-project1
 #oc apply -f pvc.yaml -n tenanta-project2
